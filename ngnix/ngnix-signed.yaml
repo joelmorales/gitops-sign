@@ -11,13 +11,12 @@ spec:
       app: nginx
   template:
     metadata:
+      annotations:
+            argocd.argoproj.io/ignore-resource-updates: "true"
       labels:
         app: nginx
     spec:
       containers:
-        metadata:
-          annotations:
-            argocd.argoproj.io/ignore-resource-updates: "true"
       - name: nginx
         image: ghcr.io/kyverno/test-verify-image:signed
         ports:
