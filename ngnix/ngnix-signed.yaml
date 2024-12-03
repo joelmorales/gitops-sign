@@ -15,6 +15,9 @@ spec:
         app: nginx
     spec:
       containers:
+        metadata:
+          annotations:
+            argocd.argoproj.io/ignore-resource-updates: "true"
       - name: nginx
         image: ghcr.io/kyverno/test-verify-image:signed
         ports:
