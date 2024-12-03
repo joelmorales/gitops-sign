@@ -11,8 +11,6 @@ spec:
       app: nginx
   template:
     metadata:
-      annotations:
-            argocd.argoproj.io/ignore-resource-updates: "true"
       labels:
         app: nginx
     spec:
